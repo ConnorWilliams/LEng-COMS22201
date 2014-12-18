@@ -5,7 +5,7 @@ The unit is essentially split into two parts on compiler techniques and semantic
 
 This assignment is to implement language features. You should implement each language feature in turn, by extending Irt and Cg to handle that language feature, and repeating this for each language feature. When you add a new feature, you might need to modify your existing implementation, even of the Lex and Syn modules. You can assume that programs are correct (i.e., no error handling is needed at this stage).
 
-A set of test programs is provided to enable you to test your compiler and demonstrate that it works. These can all be found in the same directory as the skeleton compiler.
+A set of test programs is provided to enable you to test your compiler and demonstrate that it works.
 
 
 | Feature Description                      | Test Program | Progress   |
@@ -19,8 +19,6 @@ A set of test programs is provided to enable you to test your compiler and demon
 | Whole Language                           | test7.w      | 70%        |
 | Extra Features                           |              | 71% - 100% |
 
-You can implement the language features in any order, subject to certain precedence constraints, which are intended to make the compiler easier to develop and test. For each language feature, the Prerequisites column shows the features that must be implemented before it (or at the same time).
-
 Your program must correctly compile each test program in order to get any marks for the corresponding language feature. (This does not necessarily mean that you will get full marks for correctly compiling the given test program.)
 
 If you have spare time after completing the above, you can get extra marks for the following:
@@ -33,10 +31,10 @@ If you have spare time after completing the above, you can get extra marks for t
 Submission
 ----------
 
-Submit your complete compiler (component CWK1) by January 22, 2015. All source code files must be submitted, including the Lex and Syn modules. You need to show the output that your compiler produces and allow us to reproduce the output by compiling and running your program. The files that you must submit are:
+Submit your complete compiler by January 22, 2015. You need to show the output that your compiler produces and allow us to reproduce the output by compiling and running your program. The files that you must submit are:
 
-* All source code files (in ANTLR, Java, or other languages) used by your compiler.
-* Files test1.ass through test7.ass - the assembly code produced by your compiler using the command: antlr3 camle testi.w
+* All source code files used by your compiler.
+* Files test1.ass through test7.ass - the assembly code produced by your compiler using the command: `antlr3 camle testi.w`
 
 * report.txt: a report containing:
   * A statement of which of the language features you have successfully implemented.
