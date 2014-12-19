@@ -2,7 +2,9 @@ LEng-COMS22201
 ==============
 
 The unit web page can be found [here.] (https://www.cs.bris.ac.uk/Teaching/Resources/COMS22201/)
+
 The 'While' programming language we are implementing is [here] (https://www.cs.bris.ac.uk/Teaching/Resources/COMS22201/language.html)
+
 The assembly language definition can be found [here.] (https://www.cs.bris.ac.uk/Teaching/Resources/COMS22201/machine.html)
 
 The unit is essentially split into two parts on compiler techniques and semantic methods. The coursework makes extensive use of ANTLR3.
