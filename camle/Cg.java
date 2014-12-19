@@ -34,6 +34,12 @@ static int register = 1;
       String e = expression(irt.getSub(0), o);
       emit(o, "WR "+e);
     }
+    else if (irt.getOp().equals("READ")) {
+      String Sub0 = irt.getSub(0).getSub(0).getSub(0).getOp();  
+      emit(o, "RD R"+register);
+      emit(o, "STORE R"+register+",R0," + Sub0);
+      
+    }
     else if (irt.getOp().equals("STORE")) {
       
     }

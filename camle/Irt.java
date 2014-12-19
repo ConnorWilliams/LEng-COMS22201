@@ -85,6 +85,7 @@ public class Irt
     IRTree irt1 = new IRTree(), irt2 = new IRTree(), irt3 = new IRTree();
     Token t = ast.getToken();
     int tt = t.getType();
+    String child0;
     
     switch (tt) {
         case WRITE:
@@ -108,13 +109,18 @@ public class Irt
                     irt.setOp("MOVE");
                     ast1 = (CommonTree)ast.getChild(0);
                     ast2 = (CommonTree)ast.getChild(1);
-                    String child0 = ast1.getText();
+                    child0 = ast1.getText();
                     String child1 = ast2.getText();
                     expression(ast2, irt2);
                                                                              
                     irt.addSub(new IRTree("MEM", new IRTree("CONST", new IRTree(Memory.allocate(child0)+""))));
-                    irt.addSub(irt2);
-                                        
+                    irt.addSub(irt2);                                        
+                    break;
+        case READ:
+                    irt.setOp("READ");
+                    ast1 = (CommonTree)ast.getChild(0);
+                    child0 = ast1.getText();
+                    irt.addSub(new IRTree("MEM", new IRTree("CONST", new IRTree(Memory.allocate(child0)+""))));
                     break;
 
         default: error(tt);
