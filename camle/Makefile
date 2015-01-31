@@ -4,7 +4,9 @@ all:
 	javac TokenConv.java
 	java TokenConv Syn.tokens Irt.java 
 	antlr3 *.java
-	antlr3 camle -lex test3.w
+	antlr3 camle test5.w
+	antlr3 camle -irt test5.w | ./disptree
+	./assmule -j test5.ass
 
 clean:
 	rm -f *.class

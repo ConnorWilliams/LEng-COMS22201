@@ -133,7 +133,7 @@ public class Irt
                     child0 = ast1.getText();
                     irt.addSub(new IRTree("MEM", new IRTree("CONST", new IRTree(Memory.allocate(child0)+""))));
                     break;
-                    
+/*
         case IF:
                     String operator = ast.getChild(0).getText();
                     irt.setOp("SEQ");
@@ -189,8 +189,7 @@ public class Irt
                     irt.addSub(irt1);
                     irt.addSub(irt2);
                     break;
-
-/*
+*/
                 case IF:
                     String operator = ast.getChild(0).getText();
                     irt.setOp("SEQ");
@@ -209,10 +208,10 @@ public class Irt
                     irt1.setOp("SEQ");
                     irt1.addSub(translate((CommonTree)ast.getChild(0), preLabel, midLabel));
                     
-                    
+                    /*
                     irt2.setOp("SEQ");
                     irt4.addSub(new IRTree("LABEL", new IRTree(preLabel)));
-                    
+                    */
                     
                     irt3.setOp("SEQ");                    
                     IRTree irts1 = new IRTree();
@@ -246,8 +245,7 @@ public class Irt
                     irt.addSub(irt1);
                     irt.addSub(irt3);
                     break;
-*/
-
+                    
         case WHILE:
                     irt.setOp("SEQ");
                     preLabel =   Irt.Label();
@@ -289,7 +287,7 @@ public class Irt
         }
   }
   
-/*  
+  
   public static IRTree translate (CommonTree exp, String n1, String n2)
   {
     IRTree tree = new IRTree("LOL");
@@ -315,7 +313,7 @@ public class Irt
         tree.addSub(sub2);
         
     }
-    
+    /*
     else 
     {
         sub1 = (cJump(op, (CommonTree)exp.getChild(0), (CommonTree)exp.getChild(1), n1, n2));
@@ -323,11 +321,11 @@ public class Irt
         tree.addSub(sub1);
         tree.addSub(sub2);
     }
-    
+    */
 
     return tree;
   }
-*/
+  
     
   public static IRTree cJump (String op, CommonTree e1, CommonTree e2, String n1, String n2)
   {

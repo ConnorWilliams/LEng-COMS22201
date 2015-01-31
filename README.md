@@ -1,6 +1,8 @@
 LEng-COMS22201
 ==============
 
+**The code found here would have only recieved a 50% mark. I managed to complete all the features up to and including test 5. I ran out of time whilst trying to implement a translate function which I needed to build the IRTree for nested CJUMPS e.g.** `if ((a=1 & b=2) & (c=3 & d=4)) then...`
+
 The unit web page can be found [here.] (https://www.cs.bris.ac.uk/Teaching/Resources/COMS22201/)
 
 The 'While' programming language we are implementing is [here] (https://www.cs.bris.ac.uk/Teaching/Resources/COMS22201/language.html)
